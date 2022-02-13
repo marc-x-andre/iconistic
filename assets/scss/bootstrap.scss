@@ -1,4 +1,11 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-html {
-    background-color: red;
+
+a {
+  color: #4b4b4b;
+  &:hover {
+    color: #292929;
+  }
+  &.noline {
+    text-decoration: none;
+  }
 }

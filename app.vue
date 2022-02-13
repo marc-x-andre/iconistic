@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 import './assets/scss/bootstrap.scss'
+import './assets/less/main.less'
 </script>
 
 <template>
-  <div class="container">
-    Some shared layout content:
-    <NuxtLayout>
+  <div>
+    <LayoutNavbar />
+    <div class="container">
       <NuxtPage/>
-    </NuxtLayout>
+    </div>
+    <LayoutFooter />
   </div>
 </template>
