@@ -1,5 +1,6 @@
 <template>
   <div>
+    <pre>{{ api.$state }}</pre>
     <ProductFilter />
     <div class="blocks-product">
       <ProductCard />
@@ -11,6 +12,15 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useAPI } from "~/stores/api";
+
+const api = useAPI()
+console.log(api);
+
+</script>
+
 <style lang="less" scoped>
 
 .blocks-product {

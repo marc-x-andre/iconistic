@@ -11,7 +11,7 @@
       </NuxtLink>
     </div>
     <div class="actions col-4">
-      <button>cart</button>
+      <button class="btn">cart</button>
     </div>
   </div>
 </template>

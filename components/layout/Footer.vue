@@ -1,21 +1,35 @@
 <template>
-  <div class="row">
-    <div class="col-12">
-    <br />
-    <p>about</p>
-    <p>instagram</p>
-    <br />
-    <p>terms</p>
-    <p>back to top</p>
-    <p style="float: right;">- love of wisdom (and material)</p>
-    <br />
-    <p>site by marc-x-andre</p>
+  <div class="footer row">
+    <div class="empasi col-1">
+      <p>+++++++++++++++</p>
+      <p>+++++++++++++++</p>
+    </div>
+    <div class="col-11">
+      <br />
+      <p>About</p>
+      <p>Instagram</p>
+      <br />
+      <p>Terms</p>
+      <p>Back to top</p>
+      <p style="float: right;">Love of wisdom (and material)</p>
+      <br />
+      <p>Site by marc-x-andre</p>
     </div>
   </div>
 </template>
 <style lang="less" scoped>
-.row {
+.footer {
   display: flex;
-  margin: 2em 1em;
+  margin: 5em 1em 2em;
+}
+.empasi {
+  display: flex;
+  overflow-wrap: anywhere;
+  line-height: 1em;
+  letter-spacing: 2em;
+  overflow: hidden;
+  p+p {
+    padding-top: 2em;
+  }
 }
 </style>

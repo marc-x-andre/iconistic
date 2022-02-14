@@ -1,11 +1,9 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+$body-bg: #dbd4cb;
+$body-color: #111;
 
-a {
-  color: #4b4b4b;
-  &:hover {
-    color: #292929;
-  }
-  &.noline {
-    text-decoration: none;
-  }
-}
+$theme-colors: (
+  "primary": #fff,
+  "danger": #921f19
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";

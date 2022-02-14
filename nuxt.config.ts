@@ -1,7 +1,9 @@
 export default {
   buildModules: [
     '@intlify/nuxt3',
-    '~/modules/google-fonts'
+    '@nuxtjs/strapi',
+    '~/modules/google-fonts',
+    '@pinia/nuxt',
   ],
   typescript: {
     shim: false
@@ -29,5 +31,12 @@ export default {
       locale: 'en',
       localeDir: 'locales',
     }
+  },
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337',
+    prefix: '/',
+    version: 'v4',
+    cookie: {},
+    entities: ['products', 'orders', 'subscribers'],
   }
 }
