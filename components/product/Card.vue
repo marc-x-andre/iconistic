@@ -1,14 +1,18 @@
 <template>
-  <div class="block block-p-sm">
-    <div class="inner">
-      <a href="/product/1" />
-      <img src="/placeholder.jpg" alt="Placeholder">
-      <div class="caption">
+  <div class="card">
+    <a href="/product/1" />
+    <div class="card-image">
+      <figure class="image is-1by1">
+        <img src="/placeholder.jpg" alt="Placeholder image">
+      </figure>
+    </div>
+    <!-- <div class="card-content">
+      <div class="content">
         <p class="category">sticker</p>
         <h2 class="title">Philo</h2>
         <p class="price">4.99</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

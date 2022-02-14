@@ -1,36 +1,51 @@
 <template>
   <div class="product">
-    <div class="row">
-      <div class="title col-12">
+    <div class="columns">
+      <div class="title column">
         <p>poster</p>
         <h2>Philo</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="images col-6">
-        <img src="/placeholder.jpg" alt="">
-        <img src="/placeholder.jpg" alt="">
-        <img src="/placeholder.jpg" alt="">
-        <img src="/placeholder.jpg" alt="">
+    <div class="columns">
+      <div class="images column is-two-thirds">
+        <b-carousel
+          v-model="carousel"
+        >
+          <b-carousel-item v-for="(item, i) in 6" :key="i">
+            <b-image
+              class="image"
+              :src="getImgUrl(i)"
+            />
+          </b-carousel-item>
+          <template #indicators="props">
+            <b-image
+              class="al image"
+              :src="getImgUrl(props.i)"
+              :title="props.i"
+            />
+          </template>
+        </b-carousel>
       </div>
-      <div class="info col-2" />
-      <div class="info col-4">
-        <div class="row">
-          <div class="price col-6">
-            <p>price</p>
-            <h3>4.99</h3>
-          </div>
-          <div class="size col-6">
-            <p>size</p>
-            <select name="" id="">
-              <option value="">small</option>
-              <option value="">medium</option>
-              <option value="">large</option>
-            </select>
+      <div class="info column">
+        <div class="columns">
+          <div class="size column">
+            <b-field grouped>
+              <b-field
+                label="Price"
+              >
+                <b-input icon="earth" value="4.99" disabled />
+              </b-field>
+              <b-field label="Size">
+                <b-select placeholder="Select a size" icon="earth">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </b-select>
+              </b-field>
+            </b-field>
           </div>
         </div>
         <div>
-          <button>Add to Cart</button>
+          <b-button label="Add to cart" type="is-primary" />
         </div>
         <p class="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -39,3 +54,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'ProductInfo',
+  methods: {
+    getImgUrl (value) {
+      return `https://picsum.photos/id/43${value}/800/800`
+    }
+  }
+}
+</script>
