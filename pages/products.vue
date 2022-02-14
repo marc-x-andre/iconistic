@@ -1,6 +1,9 @@
 <template>
   <div>
-    <pre>{{ api.$state }}</pre>
+    <div class="row">     
+      <pre class="col-6">{{ products }}</pre>
+      <pre class="col-6">{{ categories }}</pre>
+    </div>
     <ProductFilter />
     <div class="blocks-product">
       <ProductCard />
@@ -14,10 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import { useAPI } from "~/stores/api";
 
-const api = useAPI()
-console.log(api);
+const { find } = useStrapi4()
+
+const products = await find('products')
+const categories = await find('categories')
 
 </script>
 
@@ -32,5 +36,4 @@ console.log(api);
   grid-auto-rows: calc(var(--grid-width) / var(--columns) * var(--ratio));
   flex-grow: 1;
 }
-
 </style>

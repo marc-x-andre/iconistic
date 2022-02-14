@@ -1,7 +1,7 @@
 <template>
   <div class="block block-p-sm">
     <div class="inner">
-      <a href="/product" />
+      <a href="/product/1" />
       <img src="/placeholder.jpg" alt="Placeholder">
       <div class="caption">
         <p class="category">sticker</p>

@@ -34,7 +34,7 @@ export default {
   },
   strapi: {
     url: process.env.STRAPI_URL || 'http://localhost:1337',
-    prefix: '/',
+    prefix: '/api',
     version: 'v4',
     cookie: {},
     entities: ['products', 'orders', 'subscribers'],

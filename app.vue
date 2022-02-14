@@ -1,8 +1,3 @@
-<script lang="ts" setup>
-import './assets/scss/bootstrap.scss'
-import './assets/less/main.less'
-</script>
-
 <template>
   <div>
     <LayoutNavbar />
@@ -12,3 +7,8 @@ import './assets/less/main.less'
     <LayoutFooter />
   </div>
 </template>
+
+<script lang="ts" setup>
+import './assets/scss/bootstrap.scss'
+import './assets/less/main.less'
+</script>
