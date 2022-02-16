@@ -1,25 +1,41 @@
 <template>
   <div class="card">
-    <a href="/product/1" />
+    <!-- <a href="/product/1" /> -->
     <div class="card-image">
-      <figure class="image is-1by1">
-        <img src="/placeholder.jpg" alt="Placeholder image">
-      </figure>
+      <b-image
+        src="/placeholder.jpg"
+        ratio="1by1"
+        lazy
+      >
+        <template #placeholder>
+          <b-skeleton
+            class="skeleton-placeholder"
+            height="100%"
+          />
+        </template>
+      </b-image>
     </div>
-    <!-- <div class="card-content">
+    <div class="card-content">
       <div class="content">
-        <p class="category">sticker</p>
-        <h2 class="title">Philo</h2>
-        <p class="price">4.99</p>
+        <p class="category">
+          sticker
+        </p>
+        <p class="title">
+          Philo
+        </p>
+        <p class="price">
+          4.99
+        </p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <style lang="less" scoped>
-.inner {
+.card {
   position: relative;
   height: 100%;
+  overflow: hidden;
   a {
     position: absolute;
     left: 0;
@@ -29,52 +45,27 @@
     cursor: pointer;
     z-index: 15;
   }
-  img {
-    background: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity .5s ease-out;
-  }
-  &:hover .caption {
+  &:hover .card-content {
     opacity: 1;
     transform: translateY(0);
   }
-  .caption {
+  .card-content {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    top: 0px;
+    left: 0px;
     color: #fff;
     opacity: 0;
     transition: opacity .5s ease-out,transform .5s ease-out;
     .title {
-      font-size: 14px;
-      line-height: 1.4em;
-      padding-bottom: 10px;
-    }
-    .category, .price {
-      font-size: 11px;
-      line-height: 1.6em;
+      color: #fff;
     }
   }
 }
-.block {
-  padding: 16px;
-  .block-p-sm {
-      grid-row: auto/span 1;
-      grid-column: auto/span 1;
-  }
-  .block-p-lg {
-      grid-row: auto/span 2;
-      grid-column: auto/span 2;
-  }
-  .block-l-sm {
-      grid-column: auto/span 2;
-  }
+
+.b-skeleton {
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 </style>

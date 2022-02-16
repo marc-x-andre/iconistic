@@ -1,26 +1,27 @@
 <template>
-  <div class="footer row">
-    <div class="empasi col-1">
+  <footer class="footer columns">
+    <div class="empasi column is-1">
       <p>+++++++++++++++</p>
       <p>+++++++++++++++</p>
     </div>
-    <div class="col-11">
-      <br />
+    <div class="column">
+      <br>
       <p>About</p>
       <p>Instagram</p>
-      <br />
+      <br>
       <p>Terms</p>
       <p>Back to top</p>
-      <p style="float: right;">Love of wisdom (and material)</p>
-      <br />
+      <p style="float: right;">
+        Love of wisdom (and material)
+      </p>
+      <br>
       <p>Site by marc-x-andre</p>
     </div>
-  </div>
+  </footer>
 </template>
 <style lang="less" scoped>
 .footer {
-  display: flex;
-  margin: 5em 1em 2em;
+  margin-top: 3em;
 }
 .empasi {
   display: flex;
@@ -28,6 +29,8 @@
   line-height: 1em;
   letter-spacing: 2em;
   overflow: hidden;
+  width: 5em;
+  color: grey;
   p+p {
     padding-top: 2em;
   }

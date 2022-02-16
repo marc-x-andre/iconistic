@@ -6,8 +6,8 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item href="#">
-        Home
+      <b-navbar-item href="products">
+        Products
       </b-navbar-item>
       <b-navbar-item href="#">
         Documentation
