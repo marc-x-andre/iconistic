@@ -2,15 +2,17 @@
   <b-navbar is-transparent>
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <h1>Philoistic</h1>
+        <h1 class="title">
+          Iconistic
+        </h1>
       </b-navbar-item>
     </template>
     <template #start>
+      <b-navbar-item href="icons">
+        Icons
+      </b-navbar-item>
       <b-navbar-item href="products">
         Products
-      </b-navbar-item>
-      <b-navbar-item href="#">
-        Documentation
       </b-navbar-item>
       <b-navbar-dropdown label="Info">
         <b-navbar-item href="#">
