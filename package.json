@@ -23,6 +23,7 @@
     "nuxt-buefy": "^0.4.13",
     "strapi-sdk-js": "^2.1.5",
     "vue": "^2.6.14",
+    "vue-in-viewport-mixin": "^2.0.2",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
