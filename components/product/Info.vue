@@ -37,8 +37,12 @@
               </b-field>
               <b-field label="Size">
                 <b-select placeholder="Select a size" icon="earth">
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
+                  <option value="1">
+                    Option 1
+                  </option>
+                  <option value="2">
+                    Option 2
+                  </option>
                 </b-select>
               </b-field>
             </b-field>
