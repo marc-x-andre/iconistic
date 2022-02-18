@@ -1,21 +1,24 @@
 export const state = () => ({
-  iconList: []
+  favorite: {
+    icons: [],
+    product: []
+  }
 })
 
 export const mutations = {
-  add (state, { icon, color }) {
-    state.iconList.push({
+  addIcon (state, { icon, color }) {
+    state.favorite.icons.push({
       icon,
       color: color || undefined
     })
   },
-  remove (state, { icon }) {
-    state.iconList = state.iconList.filter(i => i.icon !== icon)
+  removeIcon (state, { icon }) {
+    state.favorite.icons = state.favorite.icons.filter(i => i.icon !== icon)
   }
 }
 
 export const getters = {
-  iconsInCart (state) {
-    return state.iconList
+  favoriteIcons (state) {
+    return state.favorite.icons
   }
 }

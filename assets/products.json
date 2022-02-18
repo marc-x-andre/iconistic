@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Corduroy Hat",
+    "type": "embroidery",
+    "price": "28.36",
+    "images": {
+      "first": "/images/corduroy_hat_profile.jpg",
+      "second": "/images/corduroy_hat_front.jpg"
+    }
+  },
+  {
+    "title": "Knit Beanie",
+    "type": "embroidery",
+    "price": "24.95",
+    "images": {
+      "first": "/images/knit_beanie_black_front.jpg",
+      "second": "/images/knit_beanie_white_front.jpg"
+    },
+    "colors": ["black", "white"]
+  },
+  {
+    "title": "Eco Tote Bag",
+    "type": "printing",
+    "price": "22.87",
+    "images": {
+      "first": "/images/eco_tote_bag_front.jpg",
+      "second": "/images/eco_tote_bag_mockup.jpg"
+    }
+  },
+  {
+    "title": "Unisex T-Shirt",
+    "type": "printing",
+    "price": "23.50",
+    "images": {
+      "first": "/images/unisex_staple-t-shirt_black.jpg",
+      "second": "/images/unisex_staple-t-shirt_white.jpg"
+    },
+    "colors": ["black", "white"]
+  },
+  {
+    "title": "Unisex Sweatshirt",
+    "type": "embroidery",
+    "price": "28.95",
+    "images": {
+      "first": "/images/unisex_crew_neck_sweatshirt_black.jpg",
+      "second": "/images/unisex_crew_neck_sweatshirt_white.jpg"
+    },
+    "colors": ["black", "white"]
+  }
+]

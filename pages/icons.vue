@@ -1,12 +1,13 @@
 <template>
   <section class="section">
+    <Steps />
     <div class="columns is-vcentered mb-6">
       <div class="column is-5">
         <h1 class="title is-4">
           All {{ allIcons.length }} icons
         </h1>
         <p>
-          You currently have <b>{{ iconsInCart.length }}</b> icon{{ 2 > iconsInCart.length ? '' : 's' }} in your favorite
+          You currently have <b>{{ favoriteIcons.length }}</b> icon{{ 2 > favoriteIcons.length ? '' : 's' }} in your favorite
         </p>
       </div>
       <div class="column">
@@ -35,14 +36,7 @@
         />
       </b-tooltip>
     </div>
-    <div class="absolute-right">
-      <b-button
-        icon-right="arrow-right"
-        @click="scrollToTop"
-      >
-        Next Step
-      </b-button>
-    </div>
+    <NextStep />
   </section>
 </template>
 
@@ -60,7 +54,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      iconsInCart: 'cart/iconsInCart'
+      favoriteIcons: 'cart/favoriteIcons'
     })
   },
   methods: {

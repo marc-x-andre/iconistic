@@ -6,7 +6,7 @@
   >
     <div
       class="box"
-      :class="inCart ? 'inCart' : ''"
+      :class="inFavorite ? 'inFavorite' : ''"
       @click="toggleIcon"
     >
       <div :class="`mdi-${icon}`" />
@@ -23,30 +23,30 @@ export default {
   },
   computed: {
     ...mapGetters({
-      iconsInCart: 'cart/iconsInCart'
+      favoriteIcons: 'cart/favoriteIcons'
     }),
     formattedIconString () {
       return this.icon.replace(/-/g, () => ' ')
     },
-    inCart () {
-      return this.iconsInCart.find(i => i.icon === this.icon)
+    inFavorite () {
+      return this.favoriteIcons.find(i => i.icon === this.icon)
     }
   },
   methods: {
     ...mapMutations({
-      add: 'cart/add',
-      remove: 'cart/remove'
+      addIcon: 'cart/addIcon',
+      removeIcon: 'cart/removeIcon'
     }),
     toggleIcon () {
-      if (this.inCart) {
-        this.remove({ icon: this.icon })
+      if (this.inFavorite) {
+        this.removeIcon({ icon: this.icon })
         this.$buefy.toast.open({
           message: 'Icon removed from your cart!',
           position: 'is-bottom',
           type: 'is-warning'
         })
       } else {
-        this.add({ icon: this.icon })
+        this.addIcon({ icon: this.icon })
         this.$buefy.toast.open({
           message: 'Icon added to your cart!',
           position: 'is-bottom',
@@ -74,7 +74,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   }
 }
-.inCart {
+.inFavorite {
   opacity: 0.6;
   border: 1px #7857d565 solid;
   box-shadow: none;
