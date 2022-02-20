@@ -1,22 +1,34 @@
 <template>
   <section class="section">
-    <div class="columns is-vcentered">
-      <div class="column inset">
-        <div class="gradi top" />
-        <video loop autoplay="autoplay">
-          <source src="/icons-list-scroll.mp4" type="video/mp4">
-        </video>
-        <div class="gradi bottom" />
+    <article>
+      <div class="columns is-vcentered">
+        <div class="column inset">
+          <div class="gradi top" />
+          <video loop autoplay="autoplay">
+            <source src="/icons-list-scroll.mp4" type="video/mp4">
+          </video>
+          <div class="gradi bottom" />
+        </div>
+        <div class="column">
+          <p class="title is-1">
+            Icon + Apparels
+          </p>
+          <p class="subtitle is-3">
+            More than 24 432 possibilities
+          </p>
+        </div>
       </div>
-      <div class="column">
-        <p class="title is-1">
-          Icon + Apparels
-        </p>
-        <p class="subtitle is-3">
-          More than 24 432 possibilities
-        </p>
-      </div>
-    </div>
+      <Steps :active-step="0" />
+      <div class="divider" />
+    </article>
+    <article>
+      <Steps :active-step="1" />
+      <div class="divider" />
+    </article>
+    <article>
+      <Steps :active-step="2" />
+      <div class="divider" />
+    </article>
   </section>
 </template>
 

@@ -51,11 +51,6 @@ export default {
           ? this.product.images.second
           : this.product.images.first
     }
-  },
-  watch: {
-    'hover' () {
-      console.log(this.hover)
-    }
   }
 }
 </script>
